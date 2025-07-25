@@ -16,7 +16,7 @@ export default function DocsIndexPage() {
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           {/* Components Documentation */}
           <a 
-            href="/docs/components"
+            href="/starter-template/docs/components/"
             className="group p-6 bg-card rounded-lg border hover:border-primary/50 transition-all duration-200 hover:shadow-lg"
           >
             <div className="flex items-center gap-3 mb-3">
@@ -37,7 +37,7 @@ export default function DocsIndexPage() {
 
           {/* Custom Components Tutorial */}
           <a 
-            href="/docs/custom-components"
+            href="/starter-template/docs/custom-components/"
             className="group p-6 bg-card rounded-lg border hover:border-primary/50 transition-all duration-200 hover:shadow-lg"
           >
             <div className="flex items-center gap-3 mb-3">
@@ -58,7 +58,7 @@ export default function DocsIndexPage() {
 
           {/* Development Guide */}
           <a 
-            href="/docs/development"
+            href="/starter-template/docs/development/"
             className="group p-6 bg-card rounded-lg border hover:border-primary/50 transition-all duration-200 hover:shadow-lg"
           >
             <div className="flex items-center gap-3 mb-3">
@@ -79,7 +79,7 @@ export default function DocsIndexPage() {
 
           {/* Theming Guide */}
           <a 
-            href="/docs/theming"
+            href="/starter-template/docs/theming/"
             className="group p-6 bg-card rounded-lg border hover:border-primary/50 transition-all duration-200 hover:shadow-lg"
           >
             <div className="flex items-center gap-3 mb-3">
@@ -109,12 +109,12 @@ export default function DocsIndexPage() {
               <h4 className="font-medium text-blue-800 dark:text-blue-200 mb-2">Per Principianti</h4>
               <ul className="space-y-1 text-sm">
                 <li>
-                  <a href="/docs/components#primi-esercizi" className="text-blue-600 dark:text-blue-300 hover:underline">
+                  <a href="/starter-template/docs/components#primi-esercizi" className="text-blue-600 dark:text-blue-300 hover:underline">
                     → Primi Esercizi Pratici
                   </a>
                 </li>
                 <li>
-                  <a href="/docs/custom-components" className="text-blue-600 dark:text-blue-300 hover:underline">
+                  <a href="/starter-template/docs/custom-components/" className="text-blue-600 dark:text-blue-300 hover:underline">
                     → Tutorial Step-by-Step
                   </a>
                 </li>
@@ -124,12 +124,12 @@ export default function DocsIndexPage() {
               <h4 className="font-medium text-blue-800 dark:text-blue-200 mb-2">Riferimenti</h4>
               <ul className="space-y-1 text-sm">
                 <li>
-                  <a href="/docs/components" className="text-blue-600 dark:text-blue-300 hover:underline">
+                  <a href="/starter-template/docs/components" className="text-blue-600 dark:text-blue-300 hover:underline">
                     → Lista Completa Componenti
                   </a>
                 </li>
                 <li>
-                  <a href="/template" className="text-blue-600 dark:text-blue-300 hover:underline">
+                  <a href="/starter-template/template/" className="text-blue-600 dark:text-blue-300 hover:underline">
                     → Vedi il Template
                   </a>
                 </li>
@@ -145,7 +145,7 @@ export default function DocsIndexPage() {
             Se sei nuovo a React o ai componenti custom, inizia con la guida ai componenti!
           </p>
           <a 
-            href="/docs/components"
+            href="/starter-template/docs/components"
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
           >
             <span>🧩</span>
