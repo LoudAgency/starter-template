@@ -5,15 +5,16 @@ Un template moderno e **friendly per principianti** per progetti Next.js con le 
 ## ✨ Perfetto per Chi Sta Imparando
 
 Questo template è stato pensato specificamente per **sviluppatori principianti** che vogliono:
+
 - 📚 **Imparare React/Next.js** con esempi pratici
-- 🧩 **Creare componenti custom** con tutorial guidati  
+- 🧩 **Creare componenti custom** con tutorial guidati
 - 💡 **Capire il codice** grazie a commenti dettagliati
 - 🎯 **Fare subito pratica** con esercizi immediati
 
 ## Stack Tecnologico
 
 - **[Next.js 15](https://nextjs.org/)** - Framework React con App Router
-- **[React 19](https://react.dev/)** - Libreria UI con le ultime features  
+- **[React 19](https://react.dev/)** - Libreria UI con le ultime features
 - **[TypeScript](https://www.typescriptlang.org/)** - Type safety
 - **[Tailwind CSS 4](https://tailwindcss.com/)** - Utility-first CSS framework
 - **[shadcn/ui](https://ui.shadcn.com/)** - Componenti UI moderni e accessibili
@@ -23,39 +24,41 @@ Questo template è stato pensato specificamente per **sviluppatori principianti*
 
 ### Prerequisiti
 
-- Node.js 18+ 
+- Node.js 18+
 - npm, yarn, pnpm o bun
 
 ### Installazione
 
 1. **Clona il repository**
+
    ```bash
    git clone <your-repo-url>
    cd starter-template
    ```
 
 2. **Installa le dipendenze**
+
    ```bash
    npm install
    ```
 
 3. **Avvia il server di sviluppo**
+
    ```bash
    npm run dev
    ```
 
-4. **Apri il browser**
-   Vai su [http://localhost:3000](http://localhost:3000)
+4. **Apri il browser** Vai su [http://localhost:3000](http://localhost:3000)
 
 ## 🗂️ Struttura del Progetto
 
 ```
 ├── src/
-│   ├── app/                    # App Router (Next.js 15) 
+│   ├── app/                    # App Router (Next.js 15)
 │   │   ├── page.tsx           # 🏠 Homepage Hello World
 │   │   ├── template/          # 📄 Template showcase
 │   │   ├── docs/              # 📚 Documentazione completa
-│   │   │   ├── page.tsx       # Hub documentazione  
+│   │   │   ├── page.tsx       # Hub documentazione
 │   │   │   ├── components/    # Lista e tutorial componenti
 │   │   │   └── custom-components/ # Tutorial step-by-step
 │   │   ├── globals.css        # Tailwind CSS + variabili
@@ -79,22 +82,26 @@ Questo template è stato pensato specificamente per **sviluppatori principianti*
 ## 🎯 Navigazione del Template
 
 ### 🏠 Homepage (`/`)
+
 **Hello World semplice** - Prima impressione pulita e accogliente
 
-### 📄 Template (`/template`) 
+### 📄 Template (`/template`)
+
 **Showcase completo** - Vedi tutte le funzionalità del template
 
 ### 📚 Documentazione (`/docs`)
+
 **Hub centrale** per imparare tutto:
 
 - **[Componenti](/docs/components)** - Lista componenti + primi esercizi
 - **[Tutorial Custom](/docs/custom-components)** - Guida step-by-step per creare componenti
-- **[Development](/docs/development)** - Come sviluppare con il template  
+- **[Development](/docs/development)** - Come sviluppare con il template
 - **[Theming](/docs/theming)** - Personalizzare colori e stili
 
 ## 🚀 Per Principianti: Inizia Qui!
 
-### 1. **Primi Passi** 
+### 1. **Primi Passi**
+
 ```bash
 # Dopo aver installato il template
 npm run dev
@@ -102,13 +109,17 @@ npm run dev
 ```
 
 ### 2. **Il Tuo Primo Componente**
+
 Vai su `/docs/components` e segui gli esercizi:
+
 - Crea il tuo primo bottone colorato
 - Aggiungi emoji e effetti hover
 - Impara step-by-step
 
 ### 3. **Tutorial Completo**
+
 Vai su `/docs/custom-components` per:
+
 - Tutorial dettagliato con spiegazioni
 - Codice con tantissimi commenti
 - Esempi che puoi copiare subito
@@ -116,25 +127,24 @@ Vai su `/docs/custom-components` per:
 ## 🧩 Componenti per Principianti
 
 ### SimpleButton
+
 ```typescript
 // Il tuo primo bottone personalizzato!
 <SimpleButton leftIcon="💾">Salva</SimpleButton>
 <SimpleButton loading={true}>Caricamento...</SimpleButton>
 ```
 
-### CustomInput  
+### CustomInput
+
 ```typescript
 // Input con etichetta, errori e icone
-<CustomInput 
-  label="Email"
-  leftIcon="📧"
-  error="Campo obbligatorio"
-/>
+<CustomInput label="Email" leftIcon="📧" error="Campo obbligatorio" />
 ```
 
 **Tutti i componenti hanno:**
+
 - ✅ Codice super commentato per capire ogni riga
-- ✅ Esempi pratici nel codice stesso  
+- ✅ Esempi pratici nel codice stesso
 - ✅ Funzionalità gradualmente più complesse
 - ✅ Perfetti per imparare e modificare
 
@@ -157,25 +167,29 @@ npm run lint
 ## 🎨 Features Principali
 
 ### 🎓 Perfetto per Imparare
+
 - **Documentazione per principianti** con linguaggio semplice
-- **Esercizi pratici immediati** da fare subito  
+- **Esercizi pratici immediati** da fare subito
 - **Codice commentato** riga per riga
 - **Tutorial step-by-step** per creare componenti
 - **Esempi con emoji** (più facili delle icone complesse!)
 
-### 🏗️ Architettura Professionale  
+### 🏗️ Architettura Professionale
+
 - **Struttura scalabile** per crescere con te
 - **Separazione chiara** tra componenti base e custom
 - **Gestione contenuti** centralizzata e semplice
 - **TypeScript** per imparare i tipi gradualmente
 
 ### 🚀 Performance Moderne
+
 - **Next.js 15** con Turbopack (build velocissimi)
 - **React 19** con le ultime funzionalità
 - **Tailwind CSS 4** zero-config
 - **shadcn/ui** componenti di qualità professionale
 
 ### 📱 Design Responsive
+
 - **Mobile-first** - funziona su tutti i dispositivi
 - **Dark/Light mode** incluso
 - **Componenti accessibili** seguono le best practices
@@ -183,6 +197,7 @@ npm run lint
 ## 🛠️ Come Personalizzare
 
 ### 1. **Contenuti**
+
 Modifica i file in `src/lib/content/` per cambiare testi e menu:
 
 ```typescript
@@ -190,12 +205,13 @@ Modifica i file in `src/lib/content/` per cambiare testi e menu:
 export const homepageContent = {
   hero: {
     title: "Il Mio Sito Fantastico!", // Cambia questo!
-    subtitle: "La mia descrizione..." // E questo!
-  }
-}
+    subtitle: "La mia descrizione...", // E questo!
+  },
+};
 ```
 
-### 2. **Colori e Stili**  
+### 2. **Colori e Stili**
+
 Modifica `src/app/globals.css` per cambiare i colori:
 
 ```css
@@ -206,12 +222,13 @@ Modifica `src/app/globals.css` per cambiare i colori:
 ```
 
 ### 3. **Componenti Custom**
+
 Crea nuovi componenti in `src/components/custom/`:
 
 ```typescript
 // Il tuo nuovo componente!
 export function MioComponente() {
-  return <div>Ciao mondo!</div>
+  return <div>Ciao mondo!</div>;
 }
 ```
 
@@ -219,7 +236,7 @@ export function MioComponente() {
 
 1. **🏠 Esplora la Homepage** - Vedi com'è fatto un Hello World pulito
 2. **📄 Vai su /template** - Scopri tutte le funzionalità
-3. **📚 Leggi /docs** - Panoramica della documentazione  
+3. **📚 Leggi /docs** - Panoramica della documentazione
 4. **🧩 Inizia con /docs/components** - Fai i primi esercizi
 5. **🎓 Approfondisci con /docs/custom-components** - Tutorial completo
 6. **🛠️ Crea i tuoi componenti** - Metti in pratica quello che hai imparato!
@@ -227,12 +244,13 @@ export function MioComponente() {
 ## 🚀 Deployment
 
 ### GitHub Pages (Automatico) ⭐
+
 Il template include **deploy automatico** su GitHub Pages:
 
 ```bash
 # 1. Setup (una volta sola)
 git init && git add . && git commit -m "Initial commit"
-git remote add origin https://github.com/USERNAME/REPO.git  
+git remote add origin https://github.com/USERNAME/REPO.git
 git push -u origin main
 
 # 2. Attiva GitHub Pages: Settings → Pages → GitHub Actions
@@ -245,12 +263,14 @@ git add . && git commit -m "Update" && git push
 📖 **Guida completa**: [GITHUB-PAGES.md](./GITHUB-PAGES.md)
 
 ### Vercel
+
 ```bash
 npm run build
 # Deploy automatico con git push su Vercel
 ```
 
 ### Export Statico
+
 ```bash
 npm run export
 # Files generati in 'out/' - carica su qualsiasi hosting
@@ -265,6 +285,7 @@ cd out && python -m http.server 8000
 ## 🤝 Contributi
 
 I contributi sono benvenuti! Specialmente:
+
 - 📚 Miglioramenti alla documentazione per principianti
 - 🧩 Nuovi componenti di esempio commentati
 - 🐛 Correzioni e semplificazioni del codice
@@ -278,8 +299,8 @@ MIT License - vedi [LICENSE](./LICENSE) per dettagli.
 
 ## 💡 Hai Domande?
 
-- 📖 **Leggi la documentazione**: [/docs](/docs)  
+- 📖 **Leggi la documentazione**: [/docs](/docs)
 - 🧩 **Inizia con gli esercizi**: [/docs/components](/docs/components)
 - 🎓 **Segui il tutorial**: [/docs/custom-components](/docs/custom-components)
 
-**Happy coding! 🎉**
+**Happy coding!! 🎉**
