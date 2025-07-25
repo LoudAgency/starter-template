@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+        // GitHub Pages 404 redirect script
+        // Redirect /docs to /docs/index.html
+        // Redirect /template to /template/index.html
+        (function() {
+            const path = window.location.pathname;
+            const basePath = window.location.origin + (window.location.pathname.split('/')[1] ? '/' + window.location.pathname.split('/')[1] : '');
+            
+            // Check if we're trying to access a directory without /index.html
+            if (path.endsWith('/')) {
+                window.location.replace(basePath + path + 'index.html');
+            } else if (path === '/docs' || path === '/template' || path.includes('/docs/') || path.includes('/template/')) {
+                window.location.replace(basePath + path + '/index.html');
+            } else {
+                // If it's not a known route, redirect to home
+                window.location.replace(basePath);
+            }
+        })();
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>

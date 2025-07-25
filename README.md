@@ -226,17 +226,41 @@ export function MioComponente() {
 
 ## 🚀 Deployment
 
-### Vercel (Raccomandato)
+### GitHub Pages (Automatico) ⭐
+Il template include **deploy automatico** su GitHub Pages:
+
+```bash
+# 1. Setup (una volta sola)
+git init && git add . && git commit -m "Initial commit"
+git remote add origin https://github.com/USERNAME/REPO.git  
+git push -u origin main
+
+# 2. Attiva GitHub Pages: Settings → Pages → GitHub Actions
+
+# 3. Deploy automatico per sempre!
+git add . && git commit -m "Update" && git push
+# 🎉 Il sito si aggiorna automaticamente!
+```
+
+📖 **Guida completa**: [GITHUB-PAGES.md](./GITHUB-PAGES.md)
+
+### Vercel
 ```bash
 npm run build
 # Deploy automatico con git push su Vercel
 ```
 
-### Altri Provider  
+### Export Statico
 ```bash
-npm run build
-npm run start
+npm run export
+# Files generati in 'out/' - carica su qualsiasi hosting
+
+# 🧪 Test locale (Live Server non funziona!)
+cd out && python -m http.server 8000
+# Vai su: http://localhost:8000
 ```
+
+📖 **Guida export**: [EXPORT.md](./EXPORT.md)
 
 ## 🤝 Contributi
 
