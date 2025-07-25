@@ -1,26 +1,86 @@
 @import "tailwindcss";
 
+/* Radix Colors-inspired CSS Variables */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Radix Slate scale for neutrals */
+  --background: 0 0% 100%; /* slate-1 */
+  --foreground: 212 13% 18%; /* slate-12 */
+  --card: 0 0% 100%; /* slate-1 */
+  --card-foreground: 212 13% 18%; /* slate-12 */
+  --popover: 0 0% 100%; /* slate-1 */
+  --popover-foreground: 212 13% 18%; /* slate-12 */
+  
+  /* Radix Violet scale for primary */
+  --primary: 262 83% 58%; /* violet-9 */
+  --primary-foreground: 0 0% 100%; /* white */
+  
+  /* Radix Slate for secondary */
+  --secondary: 210 6% 93%; /* slate-3 */
+  --secondary-foreground: 212 13% 18%; /* slate-12 */
+  
+  /* Radix Slate for muted */
+  --muted: 210 6% 93%; /* slate-3 */
+  --muted-foreground: 215 14% 34%; /* slate-11 */
+  
+  /* Radix Slate for accent */
+  --accent: 210 6% 93%; /* slate-3 */
+  --accent-foreground: 212 13% 18%; /* slate-12 */
+  
+  /* Destructive red */
+  --destructive: 358 75% 59%; /* red-9 */
+  --destructive-foreground: 0 0% 100%; /* white */
+  
+  /* Radix Slate for borders and inputs */
+  --border: 214 13% 91%; /* slate-6 */
+  --input: 214 13% 91%; /* slate-6 */
+  --ring: 262 83% 58%; /* violet-9 */
+  --radius: 0.5rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Dark mode with Radix dark variants */
+html.dark {
+  /* Radix Slate dark scale */
+  --background: 200 7% 8%; /* slate-dark-1 */
+  --foreground: 210 6% 93%; /* slate-dark-12 */
+  --card: 200 7% 8%; /* slate-dark-1 */
+  --card-foreground: 210 6% 93%; /* slate-dark-12 */
+  --popover: 200 7% 8%; /* slate-dark-1 */
+  --popover-foreground: 210 6% 93%; /* slate-dark-12 */
+  
+  /* Radix Violet dark for primary */
+  --primary: 258 90% 66%; /* violet-dark-9 */
+  --primary-foreground: 200 7% 8%; /* slate-dark-1 */
+  
+  /* Radix Slate dark for secondary */
+  --secondary: 200 6% 10%; /* slate-dark-3 */
+  --secondary-foreground: 210 6% 93%; /* slate-dark-12 */
+  
+  /* Radix Slate dark for muted */
+  --muted: 200 6% 10%; /* slate-dark-3 */
+  --muted-foreground: 215 16% 47%; /* slate-dark-11 */
+  
+  /* Radix Slate dark for accent */
+  --accent: 200 6% 10%; /* slate-dark-3 */
+  --accent-foreground: 210 6% 93%; /* slate-dark-12 */
+  
+  /* Destructive red dark */
+  --destructive: 358 65% 48%; /* red-dark-9 */
+  --destructive-foreground: 210 6% 93%; /* slate-dark-12 */
+  
+  /* Radix Slate dark for borders */
+  --border: 200 6% 20%; /* slate-dark-6 */
+  --input: 200 6% 20%; /* slate-dark-6 */
+  --ring: 258 90% 66%; /* violet-dark-9 */
+  
+  color-scheme: dark;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base styles per applicare le variabili CSS */
+* {
+  border-color: hsl(var(--border));
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
 }

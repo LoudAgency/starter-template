@@ -1,103 +1,91 @@
-import Image from "next/image";
+import { homepageContent } from '@/lib/content/homepage'
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const { hero, features, quickStart, documentation, status } = homepageContent
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  return (
+    <div className="max-w-6xl mx-auto px-4 py-16 space-y-16">
+      {/* Hero Section */}
+      <section className="text-center space-y-6">
+        <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+          {hero.title}
+        </h1>
+        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          {hero.subtitle}
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href={hero.primaryCta.href}
+            className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            {hero.primaryCta.text}
           </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          <a 
+            href={hero.secondaryCta.href}
+            className="border border-border px-6 py-3 rounded-lg font-medium hover:bg-accent transition-colors"
           >
-            Read our docs
+            {hero.secondaryCta.text}
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Features Grid */}
+      <section className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {features.map((feature, index) => (
+          <div key={index} className="p-6 bg-card rounded-lg border space-y-2">
+            <div className="text-2xl">{feature.icon}</div>
+            <h3 className="font-semibold">{feature.title}</h3>
+            <p className="text-sm text-muted-foreground">
+              {feature.description}
+            </p>
+          </div>
+        ))}
+      </section>
+
+      {/* Quick Start */}
+      <section className="bg-muted rounded-lg p-8 space-y-4">
+        <h2 className="text-2xl font-bold">{quickStart.title}</h2>
+        <div className="bg-card p-4 rounded-lg border font-mono text-sm">
+          <div className="space-y-2">
+            {quickStart.steps.map((step, index) => (
+              <div key={index}>
+                <div><span className="text-muted-foreground"># {step.description}</span></div>
+                <div>{step.command}</div>
+                {index < quickStart.steps.length - 1 && <div className="pt-2"></div>}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Documentation Links */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-bold text-center">{documentation.title}</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          {documentation.cards.map((card, index) => (
+            <div key={index} className="p-6 bg-card rounded-lg border">
+              <h3 className="font-semibold mb-2">{card.icon} {card.title}</h3>
+              <p className="text-sm text-muted-foreground mb-3">
+                {card.description}
+              </p>
+              <a href={card.href} className="text-primary hover:text-primary/80 text-sm">
+                Leggi la guida →
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Status */}
+      <section className="text-center space-y-4">
+        <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+          <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+          {status.badge}
+        </div>
+        <p className="text-sm text-muted-foreground">
+          {status.description}
+        </p>
+      </section>
     </div>
-  );
+  )
 }
