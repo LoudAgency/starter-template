@@ -8,19 +8,19 @@ export const navigationContent = {
       description: "Pagina principale"
     },
     {
-      label: "Servizi",
-      href: "/servizi",
-      description: "I nostri servizi"
+      label: "Template",
+      href: "/template",
+      description: "Presenta il template"
     },
     {
-      label: "Chi Siamo",
-      href: "/chi-siamo",
-      description: "La nostra storia"
+      label: "Documentazione",
+      href: "/docs",
+      description: "Guide e tutorial"
     },
     {
-      label: "Contatti",
-      href: "/contatti",
-      description: "Mettiti in contatto"
+      label: "Componenti",
+      href: "/docs/components",
+      description: "Lista componenti"
     },
   ],
   
@@ -42,12 +42,14 @@ export const navigationContent = {
         { label: "Consulenza", href: "/servizi/consulenza" },
       ]
     },
-    support: {
-      title: "Supporto",
+    docs: {
+      title: "Documentazione",
       links: [
-        { label: "FAQ", href: "/faq" },
-        { label: "Documentazione", href: "/docs" },
-        { label: "Contatti", href: "/contatti" },
+        { label: "Panoramica", href: "/docs" },
+        { label: "Componenti", href: "/docs/components" },
+        { label: "Tutorial Custom", href: "/docs/custom-components" },
+        { label: "Sviluppo", href: "/docs/development" },
+        { label: "Theming", href: "/docs/theming" },
       ]
     },
     legal: {
