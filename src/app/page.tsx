@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Home() {
   return (
     <div className="min-h-screen flex items-center justify-center">
@@ -9,18 +11,18 @@ export default function Home() {
           Benvenuto nel Modern Starter Template
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a 
-            href="./docs/"
+          <Link 
+            href="/docs"
             className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
           >
             Vai alla Documentazione
-          </a>
-          <a 
-            href="./template/"
+          </Link>
+          <Link 
+            href="/template"
             className="border border-border px-6 py-3 rounded-lg font-medium hover:bg-accent transition-colors"
           >
             Vedi il Template
-          </a>
+          </Link>
         </div>
       </div>
     </div>
