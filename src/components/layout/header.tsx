@@ -22,7 +22,7 @@ export function Header({ logo, navItems = [], actions, className }: HeaderProps)
     <header className={cn("sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60", className)}>
       <div className="container flex h-16 items-center">
         <div className="mr-4 hidden md:flex">
-          {logo && <Link href="/" className="mr-6 flex items-center space-x-2">{logo}</Link>}
+          {logo && <a href="/starter-template/" className="mr-6 flex items-center space-x-2">{logo}</a>}
           <nav className="flex items-center space-x-6 text-sm font-medium">
             {navItems.map((item) => (
               <Link
@@ -49,7 +49,7 @@ export function Header({ logo, navItems = [], actions, className }: HeaderProps)
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
           {logo && (
             <div className="w-full flex-1 md:w-auto md:flex-none">
-              <Link href="/" className="flex items-center md:hidden">{logo}</Link>
+              <a href="/starter-template/" className="flex items-center md:hidden">{logo}</a>
             </div>
           )}
           {actions && <div className="flex items-center space-x-2">{actions}</div>}
